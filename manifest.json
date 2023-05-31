@@ -1,0 +1,26 @@
+{
+    "name": "Edunext Manual Grading",
+    "version": "1.0.0",
+    "description": "Grade people",
+    "manifest_version": 3,
+    "author": "DK",
+    "permissions": [
+        "scripting",
+        "activeTab",
+        "storage"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Grade your Peers on Edunext"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.fu-edunext.fpt.edu.vn/*"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ]
+}
