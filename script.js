@@ -20,6 +20,9 @@ function saveConfig(){
 function loadConfig() {
     var gradeElements = document.querySelectorAll('[id='+GradeElement+']');;
     var customElementBox = document.getElementById(CustomElement);
+    if (!gradeElements || !customElementBox) {
+        return
+    }
     chrome.storage.local.get('iGrade', function(result){
         gradeElements.forEach(e => {
             e.value = result.iGrade;
